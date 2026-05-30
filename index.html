@@ -9,17 +9,17 @@
 <style>
 /* ===== CSS VARIABLES ===== */
 :root {
-  --forest: #1c2b1c;
-  --forest-mid: #2d4a2d;
-  --forest-light: #3d6b3d;
-  --cream: #f7f2e8;
-  --cream-dark: #ede5d0;
-  --gold: #c9a84c;
-  --gold-light: #e2c97e;
-  --gold-pale: #f0e4be;
-  --rose: #c4856a;
-  --text-dark: #1c2b1c;
-  --text-mid: #4a5e4a;
+  --forest: #6f5b8b;
+  --forest-mid: #8b74a8;
+  --forest-light: #a890c5;
+  --cream: #faf6ff;
+  --cream-dark: #f1e8ff;
+  --gold: #c8a2ff;
+  --gold-light: #dcc2ff;
+  --gold-pale: #eee1ff;
+  --rose: #d8a8d8;
+  --text-dark: #4d3f63;
+  --text-mid: #76688f;
   --white: #ffffff;
   --shadow: rgba(28, 43, 28, 0.15);
   --transition: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1118,7 +1118,10 @@ section {
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
   .gallery-item:nth-child(1) { grid-row: span 2; }
   .gallery-item:nth-child(5) { grid-column: auto; aspect-ratio: 3/4; }
-  .events-grid { grid-template-columns: 1fr 1fr; }
+  .events-grid { grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: 40px auto 0;
+              }
 }
 </style>
 </head>
@@ -1174,7 +1177,7 @@ section {
 
 <!-- ===== AUDIO ===== -->
 <audio id="bgMusic" loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+  <source src="ForeverLoveINST.mp3" type="audio/mpeg">
 </audio>
 
 <!-- ===== NAVBAR ===== -->
@@ -1182,7 +1185,6 @@ section {
   <ul class="nav-links">
     <li><a href="#couple">Mempelai</a></li>
     <li><a href="#events">Acara</a></li>
-    <li><a href="#gallery">Galeri</a></li>
     <li><a href="#rsvp">RSVP</a></li>
     <li><a href="#amplop">Amplop</a></li>
   </ul>
@@ -1198,7 +1200,7 @@ section {
     <svg class="hero-monogram" width="80" height="80" viewBox="0 0 80 80" fill="none">
       <circle cx="40" cy="40" r="38" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
       <circle cx="40" cy="40" r="30" stroke="rgba(201,168,76,0.15)" stroke-width="0.5"/>
-      <text x="40" y="50" text-anchor="middle" font-family="Playfair Display, serif" font-size="28" fill="rgba(201,168,76,0.8)" font-style="italic">R&S</text>
+      <text x="40" y="50" text-anchor="middle" font-family="Playfair Display, serif" font-size="28" fill="rgba(201,168,76,0.8)" font-style="italic">A&A</text>
       <!-- petal deco -->
       <path d="M40 2 C38 8 36 14 40 20 C44 14 42 8 40 2Z" fill="rgba(61,107,61,0.5)"/>
       <path d="M40 78 C42 72 44 66 40 60 C36 66 38 72 40 78Z" fill="rgba(61,107,61,0.5)"/>
@@ -1212,9 +1214,9 @@ section {
     </h1>
     <p class="hero-sub">Kami mengundang anda untuk menyaksikan hari terindah kami</p>
     <div class="hero-date-badge">
-      <span class="hero-date-day">Sabtu</span>
-      <span class="hero-date-num">12</span>
-      <span class="hero-date-month">Juli · 2025</span>
+      <span class="hero-date-day">Jumat</span>
+      <span class="hero-date-num">5</span>
+      <span class="hero-date-month">Juni · 2026</span>
     </div>
   </div>
   <div class="hero-scroll">
@@ -1253,18 +1255,17 @@ section {
       <!-- Groom -->
       <div class="couple-card reveal reveal-delay-1">
         <div class="couple-photo-wrap">
-          <div class="couple-photo-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          <img src="pria.jpg" class="couple-photo" alt="Mempelai Pria">
           </div>
           <div class="photo-ring"></div>
         </div>
         <div>
           <div class="couple-role">Mempelai Pria</div>
-          <div class="couple-name"><em>Raka</em> Pratama</div>
+          <div class="couple-name"><em>Isman</em> Rahadi</div>
           <div class="couple-parents">
             Putra pertama dari<br>
-            <strong>Bpk. Hendra Saputra</strong><br>
-            &amp; <strong>Ibu Dewi Lestari</strong>
+            <strong>Bpk. Taslim (Alm.)</strong><br>
+            &amp; <strong>Ibu Iis Siti Hadiroh (Alm.)</strong>
           </div>
         </div>
       </div>
@@ -1275,18 +1276,17 @@ section {
       <!-- Bride -->
       <div class="couple-card reveal reveal-delay-3">
         <div class="couple-photo-wrap">
-          <div class="couple-photo-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          <img src="wanita.jpg" class="couple-photo" alt="Mempelai Wanita">
           </div>
           <div class="photo-ring"></div>
         </div>
         <div>
           <div class="couple-role">Mempelai Wanita</div>
-          <div class="couple-name"><em>Sekar</em> Ayu</div>
+          <div class="couple-name"><em>Fitriana</em> Dwi</em> Widiyanti</div>
           <div class="couple-parents">
             Putri pertama dari<br>
-            <strong>Bpk. Bambang Wibowo</strong><br>
-            &amp; <strong>Ibu Siti Rahayu</strong>
+            <strong>Bpk. Jayadi</strong><br>
+            &amp; <strong>Ibu Sri Wuryanti</strong>
           </div>
         </div>
       </div>
@@ -1333,65 +1333,34 @@ section {
     <div class="events-grid">
       <!-- Akad -->
       <div class="event-card reveal reveal-delay-1">
-        <div class="event-type">Akad Nikah</div>
-        <div class="event-name">Akad</div>
+        <div class="event-type">Syukuran</div>
+        <div class="event-name">Syukuran</div>
         <div class="event-detail">
           <svg class="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           <div>
             <div class="event-info-label">Tanggal</div>
-            <div class="event-info-val">Sabtu, 12 Juli 2025</div>
+            <div class="event-info-val">Jumat, 5 Juni 2026</div>
           </div>
         </div>
         <div class="event-detail">
           <svg class="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <div>
             <div class="event-info-label">Waktu</div>
-            <div class="event-info-val">08.00 – 10.00 WIB</div>
+            <div class="event-info-val">09.00 WIB – Selesai</div>
           </div>
         </div>
         <div class="event-detail">
           <svg class="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <div>
             <div class="event-info-label">Lokasi</div>
-            <div class="event-info-val">Masjid Al-Ikhlas<br>Jl. Malioboro No. 22, Yogyakarta</div>
+            <div class="event-info-val">Omah Kebon Sokaraja<br>Jl. Bima, RT.07/RW.02, Sokaraja Kidul, Banyumas</div>
           </div>
         </div>
-        <a class="event-cta" href="https://maps.google.com/?q=Malioboro+Yogyakarta" target="_blank">
+        <a class="event-cta" href="https://maps.app.goo.gl/G8fx7ky9WGQmMoJZA" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Lihat Peta
         </a>
       </div>
-      <!-- Resepsi -->
-      <div class="event-card reveal reveal-delay-2">
-        <div class="event-type">Resepsi</div>
-        <div class="event-name">Resepsi</div>
-        <div class="event-detail">
-          <svg class="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <div>
-            <div class="event-info-label">Tanggal</div>
-            <div class="event-info-val">Sabtu, 12 Juli 2025</div>
-          </div>
-        </div>
-        <div class="event-detail">
-          <svg class="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <div>
-            <div class="event-info-label">Waktu</div>
-            <div class="event-info-val">11.00 – 14.00 WIB</div>
-          </div>
-        </div>
-        <div class="event-detail">
-          <svg class="event-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div>
-            <div class="event-info-label">Lokasi</div>
-            <div class="event-info-val">Royal Ambarrukmo Ballroom<br>Jl. Laksda Adisucipto, Yogyakarta</div>
-          </div>
-        </div>
-        <a class="event-cta" href="https://maps.google.com/?q=Royal+Ambarrukmo+Yogyakarta" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Lihat Peta
-        </a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1410,23 +1379,25 @@ section {
   <div class="section-inner">
     <div class="reveal" style="text-align:center;">
       <span class="section-label">Lokasi</span>
-      <h2 class="section-title">Venue Pernikahan</h2>
+      <h2 class="section-title">Lokasi Acara</h2>
       <div class="divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
     </div>
     <div class="maps-container reveal">
       <div class="maps-header">
-        <div class="maps-title-small">Royal Ambarrukmo Ballroom</div>
-        <span class="maps-badge">Resepsi</span>
+        <div class="maps-title-small">Omah Kebon Sokaraja</div>
+        <span class="maps-badge">Syukuran</span>
       </div>
       <iframe
-        class="maps-frame"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.6453!2d110.3960!3d-7.7828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599e6d4d4b27%3A0x1c95c4897f32a3e0!2sRoyal%20Ambarrukmo%20Hotel!5e0!3m2!1sen!2sid!4v1680000000000!5m2!1sen!2sid"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="Lokasi Resepsi">
-      </iframe>
+    class="maps-frame"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.0314187960134!2d109.3011547!3d-7.461776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655bf77267ad6b%3A0xb2062fc73c5af93!2sOmah%20kebon%20sokaraja!5e0!3m2!1sid!2sid!4v1780123666751!5m2!1sid!2sid"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Lokasi Resepsi">
+</iframe>
       <div class="maps-cta">
-        <div class="maps-address">Jl. Laksda Adisucipto No.81,<br>Caturtunggal, Depok, Sleman,<br>Yogyakarta 55281</div>
-        <a class="maps-btn" href="https://maps.google.com/?q=Royal+Ambarrukmo+Hotel+Yogyakarta" target="_blank">
+        <div class="maps-address">Jl. Bima,<br>Sokaraja Kidul, Kec. Sokaraja,<br>Banyumas 53181</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/G8fx7ky9WGQmMoJZA" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Petunjuk Arah
         </a>
@@ -1486,35 +1457,6 @@ section {
         <span>Kirim Konfirmasi</span>
       </button>
     </form>
-
-    <!-- Responses -->
-    <div class="rsvp-responses" id="rsvpResponses">
-      <div class="rsvp-response-title">Ucapan &amp; Doa</div>
-      <div class="response-list" id="responseList">
-        <!-- Seeded responses -->
-        <div class="response-item">
-          <div class="response-name">Budi Santoso</div>
-          <div class="response-meta">
-            <span class="response-attend">Hadir</span>
-          </div>
-          <div class="response-wish">"Semoga menjadi keluarga yang sakinah mawaddah warahmah. Bahagia selalu ya! 🌿"</div>
-        </div>
-        <div class="response-item">
-          <div class="response-name">Anisa Rahma</div>
-          <div class="response-meta">
-            <span class="response-attend">Hadir</span>
-          </div>
-          <div class="response-wish">"Selamat menempuh hidup baru, semoga rumah tangga kalian selalu dipenuhi cinta dan keberkahan."</div>
-        </div>
-        <div class="response-item">
-          <div class="response-name">Dian Permata</div>
-          <div class="response-meta">
-            <span class="response-attend no">Tidak Hadir</span>
-          </div>
-          <div class="response-wish">"Maaf tidak bisa hadir. Titip doa yang tulus untuk kebahagiaan Raka & Sekar. 💛"</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1526,8 +1468,8 @@ section {
   </svg>
   <div class="section-inner">
     <div class="reveal" style="text-align:center;">
-      <span class="section-label">Hadiah Digital</span>
-      <h2 class="section-title">Amplop Digital</h2>
+      <span class="section-label">Amplop Digital</span>
+      <h2 class="section-title">Gift</h2>
       <div class="divider">
         <div class="divider-line" style="background:linear-gradient(to right,transparent,rgba(201,168,76,0.3),transparent)"></div>
         <div class="divider-gem"></div>
@@ -1539,22 +1481,22 @@ section {
     </div>
     <div class="amplop-cards">
       <div class="amplop-card reveal reveal-delay-1">
-        <div class="amplop-bank-logo">BCA</div>
+        <div class="amplop-bank-logo">BNI</div>
         <div class="amplop-info">
-          <div class="amplop-bank-name">Bank BCA</div>
-          <div class="amplop-acc-num">1234 5678 90</div>
-          <div class="amplop-acc-name">a.n. Raka Pratama</div>
+          <div class="amplop-bank-name">Bank BNI</div>
+          <div class="amplop-acc-num">2047437099</div>
+          <div class="amplop-acc-name">a.n. Isman Rahadi</div>
         </div>
-        <button class="copy-btn" onclick="copyText('1234567890', this)">Salin</button>
+        <button class="copy-btn" onclick="copyText('2047437099', this)">Salin</button>
       </div>
       <div class="amplop-card reveal reveal-delay-2">
-        <div class="amplop-bank-logo">BRI</div>
+        <div class="amplop-bank-logo">Mandiri</div>
         <div class="amplop-info">
-          <div class="amplop-bank-name">Bank BRI</div>
-          <div class="amplop-acc-num">0987 6543 21</div>
-          <div class="amplop-acc-name">a.n. Sekar Ayu</div>
+          <div class="amplop-bank-name">Bank Mandiri</div>
+          <div class="amplop-acc-num">1800001257866</div>
+          <div class="amplop-acc-name">a.n. Fitriana Dwi Widiyanti</div>
         </div>
-        <button class="copy-btn" onclick="copyText('0987654321', this)">Salin</button>
+        <button class="copy-btn" onclick="copyText('1800001257866', this)">Salin</button>
       </div>
     </div>
   </div>
@@ -1576,7 +1518,7 @@ section {
       Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kami.
     </p>
     <div class="closing-names reveal reveal-delay-1">
-      <em>Raka</em> &amp; <em>Sekar</em>
+      <em>Andi</em> &amp; <em>Anna</em>
     </div>
     <div class="closing-family reveal reveal-delay-2">Beserta Keluarga</div>
 
@@ -1588,7 +1530,7 @@ section {
     </div>
 
     <div class="footer-copy reveal">
-      © 2025 Raka & Sekar Wedding · Made with ♥ in Yogyakarta
+      © 2026 Andi & Anna Wedding · Made with ♥ in Banyumas
     </div>
   </div>
 </section>
@@ -1731,7 +1673,7 @@ function initHeroCanvas() {
 
 // ── COUNTDOWN ───────────────────────────────────
 function initCountdown() {
-  const target = new Date('2025-07-12T08:00:00+07:00').getTime();
+  const target = new Date('2026-06-05T09:00:00+07:00').getTime();
 
   function pad(n) { return String(n).padStart(2, '0'); }
 
