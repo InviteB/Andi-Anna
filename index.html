@@ -987,7 +987,7 @@ section {
 }
 .amplop-card:hover { border-color: rgba(201,168,76,0.5); }
 .amplop-bank-logo {
-  width: 48px; height: 48px; flex-shrink: 0;
+  width: 60px; height: 60px; flex-shrink: 0;
   background: rgba(201,168,76,0.15);
   border: 1px solid rgba(201,168,76,0.3);
   display: flex; align-items: center; justify-content: center;
@@ -997,6 +997,12 @@ section {
   color: var(--gold);
   text-transform: uppercase;
 }
+.amplop-bank-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .amplop-info { flex: 1; }
 .amplop-bank-name {
   font-family: 'Jost', sans-serif;
@@ -1200,7 +1206,7 @@ section {
     <svg class="hero-monogram" width="80" height="80" viewBox="0 0 80 80" fill="none">
       <circle cx="40" cy="40" r="38" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
       <circle cx="40" cy="40" r="30" stroke="rgba(201,168,76,0.15)" stroke-width="0.5"/>
-      <text x="40" y="50" text-anchor="middle" font-family="Playfair Display, serif" font-size="28" fill="rgba(201,168,76,0.8)" font-style="italic">A&A</text>
+      <text x="40" y="50" text-anchor="middle" font-family="Playfair Display, serif" font-size="28" fill="rgba(230,230,250,0.8)" font-style="italic">A&A</text>
       <!-- petal deco -->
       <path d="M40 2 C38 8 36 14 40 20 C44 14 42 8 40 2Z" fill="rgba(61,107,61,0.5)"/>
       <path d="M40 78 C42 72 44 66 40 60 C36 66 38 72 40 78Z" fill="rgba(61,107,61,0.5)"/>
@@ -1277,12 +1283,11 @@ section {
       <div class="couple-card reveal reveal-delay-3">
         <div class="couple-photo-wrap">
           <img src="wanita.jpg" class="couple-photo" alt="Mempelai Wanita">
-          </div>
           <div class="photo-ring"></div>
         </div>
         <div>
           <div class="couple-role">Mempelai Wanita</div>
-          <div class="couple-name"><em>Fitriana</em> Dwi</em> Widiyanti</div>
+          <div class="couple-name"><em>Fitriana</em> Dwi Widiyanti</div>
           <div class="couple-parents">
             Putri pertama dari<br>
             <strong>Bpk. Jayadi</strong><br>
@@ -1481,7 +1486,9 @@ section {
     </div>
     <div class="amplop-cards">
       <div class="amplop-card reveal reveal-delay-1">
-        <div class="amplop-bank-logo">BNI</div>
+        <div class="amplop-bank-logo">
+            <img src="bni.png" alt="BNI">
+        </div>
         <div class="amplop-info">
           <div class="amplop-bank-name">Bank BNI</div>
           <div class="amplop-acc-num">2047437099</div>
@@ -1490,7 +1497,9 @@ section {
         <button class="copy-btn" onclick="copyText('2047437099', this)">Salin</button>
       </div>
       <div class="amplop-card reveal reveal-delay-2">
-        <div class="amplop-bank-logo">Mandiri</div>
+        <div class="amplop-bank-logo">
+            <img src="mandiri.png" alt="Mandiri">
+        </div>
         <div class="amplop-info">
           <div class="amplop-bank-name">Bank Mandiri</div>
           <div class="amplop-acc-num">1800001257866</div>
@@ -1826,6 +1835,31 @@ function showToast(msg) {
   t.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function submitRSVP(event) {
+  event.preventDefault();
+
+  const data = {
+    nama: document.getElementById("rsvp-name").value,
+    kehadiran: document.querySelector('input[name="attend"]:checked')?.value,
+    tamu: document.getElementById("rsvp-guests").value,
+    ucapan: document.getElementById("rsvp-wish").value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbzN0UrFwxnoPKCgP4ousy4TOmmgccSzNyfxF1S7nVVnohl4fCE4kbBx3khQou3h9V8Alw/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(result => {
+    alert("Konfirmasi berhasil dikirim!");
+    document.getElementById("rsvpForm").reset();
+  })
+  .catch(error => {
+    console.error(error);
+    alert("Gagal mengirim konfirmasi.");
+  });
 }
 </script>
 </body>
